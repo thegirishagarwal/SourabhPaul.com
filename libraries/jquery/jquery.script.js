@@ -82,8 +82,18 @@ var windowWidth = window.innerWidth,
 		openMobileMenu: {
 			selector: '#mobile-menu a',
 			init: function() {
-				$(this.selector).click(function() {
-					$('body').toggleClass('menuIsOpened');
+				$(this.selector).click(function(e) {
+					e.preventDefault();
+					$('body').addClass('menuIsOpened');
+				})
+			}
+		},
+		closeMobileMenu: {
+			selector: '#close-menu a',
+			init: function() {
+				$(this.selector).click(function(e) {
+					e.preventDefault();
+					$('body').removeClass('menuIsOpened');
 				})
 			}
 		},

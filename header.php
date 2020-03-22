@@ -40,7 +40,7 @@
 					<div class="row">
 						<div class="container">
 							<div class="header-container">
-								<div class="d-flex flex-wrap align-content-center justify-content-center">
+								<div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-center">
 									<div class="logo-wraper">
 										<h1>
 											<a href="index.php">
@@ -49,14 +49,19 @@
 										</h1>
 									</div>
 
-									<div id="mobile-menu" class="d-flex d-md-none">
+									<div id="mobile-menu" class="d-flex d-lg-none">
 										<a href="javascript:;">
 											<span></span>
 										</a>
 									</div>
-									<div class="menu-navbar">
-										<nav id="navigation" class="d-flex flex-wrap justify-content-between align-items-center h-100">
-											<div class="col-md-4">
+									<div class="menu-navbar d-flex flex-wrap justify-content-between align-items-start align-items-lg-center">
+										<div id="close-menu" class="d-lg-none">
+											<a href="javascript:;">
+												<span></span>
+											</a>
+										</div>
+										<nav id="navigation" class="d-flex flex-wrap justify-content-between w-100">
+											<div class="col-lg-4">
 												<ul id="menu-left" class="d-flex flex-wrap list-unstyled justify-content-between">
 													<li>
 														<a href="motion.php">
@@ -75,7 +80,7 @@
 													</li>
 												</ul>
 											</div>
-											<div class="col-md-4">
+											<div class="col-lg-4">
 												<ul id="menu-right" class="d-flex flex-wrap list-unstyled justify-content-between">
 													<li data-menuanchor="clientsPage">
 														<a href="index.php#clientsPage">

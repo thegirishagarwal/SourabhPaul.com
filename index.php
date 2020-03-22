@@ -5,19 +5,18 @@ include 'header.php';?>
 
 	<div id="main">
 		<section id="hero" class="section d-flex flex-wrap align-items-center">
-			<div class="hero-overlay"></div>
-			<div class="container-fluid w-100">
-				<div class="row">
-					<img src="libraries/images/hero-banner.png" alt="Hero Banner" data-image="#hero">
+			<div class="section-overlay hero-overlay"></div>
+			<img src="libraries/images/hero-banner.png" alt="Hero Banner" data-image="#hero">
+				<div class="container h-100">
 					<div class="hero-container no-gutters h-100 d-flex flex-wrap w-100">
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="hero-left hero-items h-100 d-flex flex-wrap justify-content-center align-items-center">
 								<h3>
 									Motion
 								</h3>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="hero-right hero-items h-100 d-flex flex-wrap justify-content-center align-items-center">
 								<h3>
 									Photography
@@ -26,7 +25,6 @@ include 'header.php';?>
 						</div>
 					</div>
 				</div>
-			</div>
 			<div class="goToBottom">
 				<a href="javascript:;">
 					<img src="libraries/images/arrow-bottom.png" alt="Arrow Bottom">
@@ -81,7 +79,7 @@ include 'header.php';?>
 									<div class="client-logo-slider owl-carousel">
 										<div class="slider-item">
 											<div class="d-flex flex-wrap justify-content-between align-items-center">
-												<div class="">
+												<div class="client-logo">
 													<div class="client-logo-image">
 														<div class="inner-logo-image">
 															<figure class="d-flex flex-wrap align-items-center justify-content-center">
@@ -90,7 +88,7 @@ include 'header.php';?>
 														</div>
 													</div>
 												</div>
-												<div class="">
+												<div class="client-logo">
 													<div class="client-logo-image">
 														<div class="inner-logo-image">
 															<figure class="d-flex flex-wrap align-items-center justify-content-center">
@@ -99,7 +97,7 @@ include 'header.php';?>
 														</div>
 													</div>
 												</div>
-												<div class="">
+												<div class="client-logo">
 													<div class="client-logo-image">
 														<div class="inner-logo-image">
 															<figure class="d-flex flex-wrap align-items-center justify-content-center">
@@ -108,7 +106,7 @@ include 'header.php';?>
 														</div>
 													</div>
 												</div>
-												<div class="">
+												<div class="client-logo">
 													<div class="client-logo-image">
 														<div class="inner-logo-image">
 															<figure class="d-flex flex-wrap align-items-center justify-content-center">
@@ -136,9 +134,11 @@ include 'header.php';?>
 							<div class="contact-information text-center">
 								<p>Like what i do? Get in Touch</p>
 								<p>
-									<a href="mailto:sourabhpoul@gmail.com">sourabhpoul@gmail.com</a>
-									<span>|</span>
-									<a href="tel:987456123">987456123</a>
+									<span>
+										<a href="mailto:sourabhpoul@gmail.com">sourabhpoul@gmail.com</a>
+										<span class="d-none d-md-inline">|</span>
+										<a href="tel:987456123">987456123</a>
+									</span>
 								</p>
 							</div>
 						</div>
