@@ -71,15 +71,10 @@ var windowWidth = window.innerWidth,
 				var selector = $(this.selector);
 				$(this.selector).each(function() {
 					var thisHref = $(this).attr('href');
-					var products = ['bottam-plat.php', 'slag-pot.php', 'fullen-of-iron.php', 'coupling.php', 'furnace-door.php', 'furnace-rail.php', 'ingot-mould.php'];
 					var windowUrl = window.location.href.substr(window.location.href.lastIndexOf('/')+1);
-					if ( products.includes(windowUrl) ) {
-						if ( $(this).parent().hasClass('product') ) {
-							$(this).addClass('active');
-						}
-					}else if (thisHref === windowUrl){
-						selector.removeClass('active');
-						$(this).addClass('active');
+					if (thisHref === windowUrl){
+						selector.parent().removeClass('active');
+						$(this).parent().addClass('active');
 					} 
 				})
 			}
@@ -140,11 +135,37 @@ var windowWidth = window.innerWidth,
 			init: function() {
 				$(this.selector).each(function() {
 					$(this).owlCarousel({
-						items: 4,
+						items: 1,
 						nav: true,
 						dots: false,
-						margin: '30px'
 					});
+				})
+			}
+		},
+		fullpagesss: {
+			selector: '#main',
+			init: function() {
+				$(this.selector).fullpage({
+					css3: true,
+					scrollingSpeed: 1000,
+					dragAndMove: true,
+					dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+					controlArrows: false,
+					scrollbar: true,
+					anchors: ['', 'aboutMePage', 'clientsPage', 'contactPage']
+				});
+			}
+		},
+		photoGraphy: {
+			selector: '.photography-content',
+			init: function() {
+				$(this.selector).isotope({
+					itemSelector: '.photography-item',
+					percentPosition: true,
+					masonry: {
+						gutter: 10,
+						columnWidth: '.photo-sizer'
+					}
 				})
 			}
 		}

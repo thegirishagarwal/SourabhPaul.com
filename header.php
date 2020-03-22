@@ -17,10 +17,11 @@
 	 		<link href="libraries/fonts/stylesheet.css" rel="stylesheet">
 
 	 	<!-- Plugins -->
-			<link rel="stylesheet" href="libraries/plugins/bootstrap/css/bootstrap.css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 			<link rel="stylesheet" href="libraries/plugins/owlCarousel/assets/owl.carousel.min.css">
-			<link rel="stylesheet" href="libraries/plugins/magnific/magnific-popup.css">
+
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" />
 		<!-- Custom -->
 			<link rel="stylesheet" type="text/css" href="libraries/css/style.css">
 			<link rel="stylesheet" type="text/css" href="libraries/css/media.css">
@@ -34,7 +35,7 @@
 
 		<!-- Header Conent -->
 
-			<header id="header" class="site-header">
+			<header id="header" class="site-header <?php echo ($headerClass) ? $headerClass : ''; ?>">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="container">
@@ -58,17 +59,17 @@
 											<div class="col-md-4">
 												<ul id="menu-left" class="d-flex flex-wrap list-unstyled justify-content-between">
 													<li>
-														<a href="index.php">
+														<a href="motion.php">
 															Motion
 														</a>
 													</li>
 													<li>
-														<a href="about.php">
+														<a href="photography.php">
 															Photography
 														</a>
 													</li>
-													<li>
-														<a href="contact.php">
+													<li data-menuanchor="aboutMePage">
+														<a href="index.php#aboutMePage">
 															About
 														</a>
 													</li>
@@ -76,18 +77,18 @@
 											</div>
 											<div class="col-md-4">
 												<ul id="menu-right" class="d-flex flex-wrap list-unstyled justify-content-between">
-													<li>
-														<a href="index.php">
+													<li data-menuanchor="clientsPage">
+														<a href="index.php#clientsPage">
 															Clients
 														</a>
 													</li>
 													<li>
-														<a href="about.php">
+														<a href="javascript:;">
 															Blog
 														</a>
 													</li>
-													<li>
-														<a href="contact.php">
+													<li data-menuanchor="contactPage">
+														<a href="index.php#contactPage">
 															Contact
 														</a>
 													</li>
