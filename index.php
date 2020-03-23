@@ -162,12 +162,12 @@ include 'header.php';?>
 										</a>
 									</li>
 									<li>
-										<a href="index.php#aboutMePage">
+										<a href="#aboutMe" class="scroll">
 											About
 										</a>
 									</li>
 									<li>
-										<a href="index.php#clientsPage">
+										<a href="#clients" class="scroll">
 											Clients
 										</a>
 									</li>
@@ -177,7 +177,7 @@ include 'header.php';?>
 										</a>
 									</li>
 									<li>
-										<a href="index.php#contactPage">
+										<a href="#contact" class="scroll">
 											Contact
 										</a>
 									</li>

@@ -97,6 +97,26 @@ var windowWidth = window.innerWidth,
 				})
 			}
 		},
+		setSinglePageMenu: {
+			selector: '.scroll',
+			init: function() {
+				$(this.selector).click(function(e) {
+					e.preventDefault();
+					var $thisHref = $(this).attr('href');
+					$('body').removeClass('menuIsOpened');
+
+					if (!window.screen.orientation.type.includes('portrait')) {
+						$('#main').animate({
+							scrollTop: $($thisHref).offset().top
+						}, 1000)
+					} else {
+						$('html, body').animate({
+							scrollTop: $($thisHref).offset().top
+						}, 1000)
+					}
+				})
+			}
+		},
 		magnificPopup: {
 			selector: '.magnific-popup',
 			init: function() {
@@ -155,15 +175,16 @@ var windowWidth = window.innerWidth,
 		fullpagesss: {
 			selector: '#main',
 			init: function() {
-				$(this.selector).fullpage({
-					css3: true,
-					scrollingSpeed: 1000,
-					dragAndMove: true,
-					dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
-					controlArrows: false,
-					scrollbar: true,
-					anchors: ['', 'aboutMePage', 'clientsPage', 'contactPage']
-				});
+				if (window.screen.orientation.type.includes('portrait')) {
+					$(this.selector).fullpage({
+						css3: true,
+						scrollingSpeed: 1000,
+						dragAndMove: true,
+						dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+						controlArrows: false,
+						scrollbar: true,
+					});
+				}
 			}
 		},
 		photoGraphy: {

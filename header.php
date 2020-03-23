@@ -73,8 +73,8 @@
 															Photography
 														</a>
 													</li>
-													<li data-menuanchor="aboutMePage">
-														<a href="index.php#aboutMePage">
+													<li>
+														<a href="#aboutMe" class="scroll">
 															About
 														</a>
 													</li>
@@ -82,8 +82,8 @@
 											</div>
 											<div class="col-lg-4">
 												<ul id="menu-right" class="d-flex flex-wrap list-unstyled justify-content-between">
-													<li data-menuanchor="clientsPage">
-														<a href="index.php#clientsPage">
+													<li>
+														<a href="#clients" class="scroll">
 															Clients
 														</a>
 													</li>
@@ -92,8 +92,8 @@
 															Blog
 														</a>
 													</li>
-													<li data-menuanchor="contactPage">
-														<a href="index.php#contactPage">
+													<li>
+														<a href="#contact" class="scroll">
 															Contact
 														</a>
 													</li>

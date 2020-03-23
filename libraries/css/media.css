@@ -17,6 +17,11 @@
         font-size: 16px;
     }
 
+    #hero{
+        background-position: center left;
+        background-size: cover;
+    }
+
     .clients-logo-section .client-logo-image .inner-logo-image{
         padding: 30px;
     }
@@ -44,6 +49,7 @@
         padding: 50px 0 15px;
         transition: all 0.3s;
         z-index: 9999;
+        overflow-y: auto;
     }
 
     body.menuIsOpened .menu-navbar{
@@ -153,6 +159,12 @@
 
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    .section{
+        height: auto !important;
+    }
+}
+
 @media (max-width: 575px) {
     .section-title{
         font-size: 68px;
@@ -179,6 +191,12 @@
         color: #ce3738;
     }
 
+}
+
+@media (max-width: 575px) and (orientation: landscape) {
+    #hero .hero-items{
+        padding: 50px 0;
+    }
 }
 
 @media (max-width: 479px) {
