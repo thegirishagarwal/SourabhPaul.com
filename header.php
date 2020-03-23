@@ -31,7 +31,7 @@
 		======================================
 	 -->
 </head>
-	<body>
+	<body class="<?php echo ($bodyClass) ? $bodyClass : '' ?>">
 
 		<!-- Header Conent -->
 

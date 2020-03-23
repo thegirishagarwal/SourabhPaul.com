@@ -209,8 +209,10 @@ var windowWidth = window.innerWidth,
 			init: function() {
 				var selector = this.selector;
 				setTimeout(function() {
-					$(selector).fadeOut();
-				}, 11000)
+					$(selector).fadeOut(function() {
+						$('body').removeClass('animation-running');
+					});
+				}, 5000)
 			}
 		}
 	}

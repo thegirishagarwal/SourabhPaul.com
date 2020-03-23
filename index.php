@@ -1,5 +1,6 @@
 <?php
 $headerClass = 'header-transparent';
+$bodyClass = 'animation-running';
 include 'header.php';?>
 
 

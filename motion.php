@@ -1,5 +1,6 @@
 <?php
 $headerClass = '';
+$bodyClass = '';
 include 'header.php' ?>
 
     <section id="motion">
