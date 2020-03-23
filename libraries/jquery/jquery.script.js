@@ -100,21 +100,19 @@ var windowWidth = window.innerWidth,
 		setSinglePageMenu: {
 			selector: '.scroll',
 			init: function() {
-				$(this.selector).click(function(e) {
-					e.preventDefault();
-					var $thisHref = $(this).attr('href');
-					$('body').removeClass('menuIsOpened');
-
-					if (!window.screen.orientation.type.includes('portrait')) {
-						$('#main').animate({
-							scrollTop: $($thisHref).offset().top
-						}, 1000)
-					} else {
-						$('html, body').animate({
-							scrollTop: $($thisHref).offset().top
-						}, 1000)
-					}
-				})
+				if (is_mobile) {
+					$(this.selector).click(function(e) {
+						e.preventDefault();
+						var $thisHref = $(this).data('href');
+						$('body').removeClass('menuIsOpened');
+	
+						if (is_mobile) {
+							$('html, body').animate({
+								scrollTop: $($thisHref).offset().top
+							}, 1000)
+						}
+					})
+				}
 			}
 		},
 		magnificPopup: {
@@ -175,7 +173,7 @@ var windowWidth = window.innerWidth,
 		fullpagesss: {
 			selector: '#main',
 			init: function() {
-				if (window.screen.orientation.type.includes('portrait')) {
+				if (!is_mobile) {
 					$(this.selector).fullpage({
 						css3: true,
 						scrollingSpeed: 1000,
@@ -198,6 +196,21 @@ var windowWidth = window.innerWidth,
 						columnWidth: '.photo-sizer'
 					}
 				})
+			}
+		},
+		showWelcomeSection: {
+			selector: '.welcome-container',
+			init: function() {
+				$(this.selector).fadeIn('3000');
+			}
+		},
+		hideWelcomeSection: {
+			selector: '#welcome',
+			init: function() {
+				var selector = this.selector;
+				setTimeout(function() {
+					$(selector).fadeOut();
+				}, 11000)
 			}
 		}
 	}

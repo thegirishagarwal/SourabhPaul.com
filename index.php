@@ -3,6 +3,33 @@ $headerClass = 'header-transparent';
 include 'header.php';?>
 
 
+	<?php
+		$welcomeImageData = [
+			'welcome-1.jpg',
+			'welcome-2.jpg',
+			'welcome-3.jpg',
+			'welcome-4.jpg'
+		];
+
+		$welcomeImageKeys = shuffle($welcomeImageData);
+		$welcomeImage = $welcomeImageData[$welcomeImageKeys];
+	?>
+
+	<section id="welcome" class="section flex-wrap justify-content-center align-items-center">
+		<div class="section-overlay welcome-overlay"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<img src="libraries/images/<?php echo $welcomeImage; ?>" alt="" data-image="#welcome">
+				<div class="container">
+					<div class="welcome-container text-center">
+						<h2 class="welcome-headline">Welcome to</h2>
+						<h3 class="welcome-title"><span>S</span>ourabhPaul.com</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<div id="main">
 		<section id="hero" class="section d-flex flex-wrap align-items-center">
 			<div class="section-overlay hero-overlay"></div>
@@ -162,12 +189,12 @@ include 'header.php';?>
 										</a>
 									</li>
 									<li>
-										<a href="#aboutMe" class="scroll">
+										<a href="#aboutmePage" class="scroll" data-href="#aboutme">
 											About
 										</a>
 									</li>
 									<li>
-										<a href="#clients" class="scroll">
+										<a href="#clientsPage" class="scroll" data-href="#clients">
 											Clients
 										</a>
 									</li>
@@ -177,7 +204,7 @@ include 'header.php';?>
 										</a>
 									</li>
 									<li>
-										<a href="#contact" class="scroll">
+										<a href="#contactPage" class="scroll" data-href="#contact">
 											Contact
 										</a>
 									</li>

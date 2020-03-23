@@ -150,7 +150,7 @@ body.menuIsOpened:before{
 }
 
 .section{
-	min-height: 100vh;
+	height: 100vh;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-position: center;
@@ -333,10 +333,45 @@ body.menuIsOpened:before{
 }
 
 
+/* Welcome Section */
+#welcome{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+	display: flex;
+}
+.welcome-overlay{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-container{
+	position: relative;
+	display: none;
+}
+.welcome-headline{
+	position: absolute;
+	color: #ffffff;
+	top: 0;
+	left: 220px;
+}
+.welcome-title{
+	font-size: 125px;
+	color: #ce3738;
+	font-family: 'brownhill_scriptregular';
+}
+.welcome-title span{
+	font-family: 'badass_moonregular', sans-serif;
+	font-size: 190px;
+	line-height: 125px;
+}
+
 /* Hero Section */
 #hero{
-	background-position: left top -120px;
-	background-size: 125%;
 	background-color: #04044a;
 	position: relative;
 	z-index: 1;
@@ -542,5 +577,5 @@ body.menuIsOpened:before{
 
 .photo-sizer,
 .photography-item{
-	width: calc(100% / 4);
+	width: calc(100% / 4.20);
 }

@@ -23,8 +23,8 @@
 
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" />
 		<!-- Custom -->
-			<link rel="stylesheet" type="text/css" href="libraries/css/style.css">
-			<link rel="stylesheet" type="text/css" href="libraries/css/media.css">
+			<link rel="stylesheet" type="text/css" href="libraries/css/style.css?v=<?php echo time(); ?>">
+			<link rel="stylesheet" type="text/css" href="libraries/css/media.css?v=<?php echo time(); ?>">
 	<!--
 		======================================
 			Custom css include
@@ -74,7 +74,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="#aboutMe" class="scroll">
+														<a href="#aboutmePage" class="scroll" data-href="#aboutme">
 															About
 														</a>
 													</li>
@@ -83,7 +83,7 @@
 											<div class="col-lg-4">
 												<ul id="menu-right" class="d-flex flex-wrap list-unstyled justify-content-between">
 													<li>
-														<a href="#clients" class="scroll">
+														<a href="#clientsPage" class="scroll" data-href="#clients">
 															Clients
 														</a>
 													</li>
@@ -93,7 +93,7 @@
 														</a>
 													</li>
 													<li>
-														<a href="#contact" class="scroll">
+														<a href="#contactPage" class="scroll" data-href="#contact">
 															Contact
 														</a>
 													</li>
