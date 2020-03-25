@@ -31,7 +31,7 @@ include 'header.php';?>
 		</div>
 	</section>
 
-	<div id="main">
+	<main id="main">
 		<section id="hero" class="section d-flex flex-wrap align-items-center">
 			<div class="section-overlay hero-overlay"></div>
 			<img src="libraries/images/hero-banner.png" alt="Hero Banner" data-image="#hero">
@@ -145,6 +145,46 @@ include 'header.php';?>
 												</div>
 											</div>
 										</div>
+										<div class="slider-item">
+											<div class="d-flex flex-wrap justify-content-between align-items-center">
+												<div class="client-logo">
+													<div class="client-logo-image">
+														<div class="inner-logo-image">
+															<figure class="d-flex flex-wrap align-items-center justify-content-center">
+																<img src="libraries/images/ngp.jpg" alt="Client Logo">
+															</figure>
+														</div>
+													</div>
+												</div>
+												<div class="client-logo">
+													<div class="client-logo-image">
+														<div class="inner-logo-image">
+															<figure class="d-flex flex-wrap align-items-center justify-content-center">
+																<img src="libraries/images/rsvp.png" alt="Client Logo">
+															</figure>
+														</div>
+													</div>
+												</div>
+												<div class="client-logo">
+													<div class="client-logo-image">
+														<div class="inner-logo-image">
+															<figure class="d-flex flex-wrap align-items-center justify-content-center">
+																<img src="libraries/images/mx-player.png" alt="Client Logo">
+															</figure>
+														</div>
+													</div>
+												</div>
+												<div class="client-logo">
+													<div class="client-logo-image">
+														<div class="inner-logo-image">
+															<figure class="d-flex flex-wrap align-items-center justify-content-center">
+																<img src="libraries/images/excel-entartainment.png" alt="Client Logo">
+															</figure>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -168,48 +208,6 @@ include 'header.php';?>
 										<a href="tel:987456123">987456123</a>
 									</span>
 								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="footer">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="container">
-							<div class="footer-navigation">
-								<ul class="list-unstyled">
-									<li>
-										<a href="motion.php">
-											Motion
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											Photography
-										</a>
-									</li>
-									<li>
-										<a href="#aboutmePage" class="scroll" data-href="#aboutme">
-											About
-										</a>
-									</li>
-									<li>
-										<a href="#clientsPage" class="scroll" data-href="#clients">
-											Clients
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											Blog
-										</a>
-									</li>
-									<li>
-										<a href="#contactPage" class="scroll" data-href="#contact">
-											Contact
-										</a>
-									</li>
-								</ul>
 							</div>
 						</div>
 					</div>

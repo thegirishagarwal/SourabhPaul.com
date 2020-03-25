@@ -126,13 +126,8 @@
     }
 
     #aboutme .section-title{
-        padding-left: 120px;
-        margin-top: 80px;
+        margin-top: 125px;
         text-align: center;
-    }
-
-    .about-description{
-        margin-top: 60px;
     }
 
     #aboutme .about-description p{
@@ -207,6 +202,11 @@
     .section{
         height: auto !important;
     }
+
+    #hero{
+        min-height: 100vh;
+        height: 400px !important;
+    }
 }
 
 @media (max-width: 575px) {
@@ -217,6 +217,9 @@
     .section-title span::before{
         width: 205px;
         height: 50px;
+    }
+    #aboutme .section-title{
+        margin-bottom: 0;
     }
     .logo-wraper h1 a{
         font-size: 43px;
@@ -262,8 +265,7 @@
         left: 40px;
     }
     #aboutme .section-title{
-        padding-left: 110px;
-        margin-top: 60px;
+        margin-top: 100px;
     }
 
     .photo-sizer,
@@ -304,7 +306,7 @@
         width: 100px;
     }
     #aboutme .section-title{
-        margin-top: 50px;
+        margin-top: 90px;
     }
     .clients-logo-section .client-logo-image .inner-logo-image{
         padding: 10px;

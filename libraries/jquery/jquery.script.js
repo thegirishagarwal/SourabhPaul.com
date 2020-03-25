@@ -164,8 +164,13 @@ var windowWidth = window.innerWidth,
 				$(this.selector).each(function() {
 					$(this).owlCarousel({
 						items: 1,
+						margin: 30,
 						nav: true,
+						loop: true,
 						dots: false,
+						autoplay: true,
+						autoplayDuration: 3000,
+						autoplaySpeed: 3000
 					});
 				})
 			}
@@ -174,28 +179,58 @@ var windowWidth = window.innerWidth,
 			selector: '#main',
 			init: function() {
 				if (!is_mobile) {
-					$(this.selector).fullpage({
-						css3: true,
+					var myFullpage = new fullpage(this.selector, {
+						verticalCentered: false,
+						css3:false,
 						scrollingSpeed: 1000,
-						dragAndMove: true,
-						dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
 						controlArrows: false,
 						scrollbar: true,
+						parallax: true,
+						parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+						parallaxOptions: {
+							type: 'reveal',
+							percentage: 62,
+							property: 'translate'
+						},
+						scrollingSpeed: 1000,
+						autoScrolling: true,
+						scrollBar: false,
+						fitToSection:false,
+						afterLoad: function(origin, destination, direction) {
+							if (destination.item.id === 'contact') {
+								$('#footer').css('position', 'absolute');
+							}
+						},
+						onLeave: function(origin, destination, direction) {
+							if (origin.item.id === 'contact') {
+								$('#footer').css('position', '');
+							}
+						}
 					});
+
 				}
 			}
 		},
 		photoGraphy: {
 			selector: '.photography-content',
 			init: function() {
-				$(this.selector).isotope({
-					itemSelector: '.photography-item',
-					percentPosition: true,
-					masonry: {
-						gutter: 10,
-						columnWidth: '.photo-sizer'
+				$(this.selector).magnificPopup({
+					delegate: '.photography-item a',
+					type: 'image',
+					tLoading: 'Loading image #%curr%...',
+					mainClass: 'mfp-img-mobile',
+					gallery: {
+					  enabled: true,
+					  navigateByImgClick: true,
+					  preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+					},
+					image: {
+					  tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					  titleSrc: function(item) {
+						return item.el.attr('data-title');
+					  }
 					}
-				})
+				});
 			}
 		},
 		showWelcomeSection: {
@@ -213,6 +248,14 @@ var windowWidth = window.innerWidth,
 						$('body').removeClass('animation-running');
 					});
 				}, 5000)
+			}
+		},
+		setFooter: {
+			selector: '#footer',
+			init: function() {
+				$('#main').change(function() {
+					console.error('sdfsd')
+				})
 			}
 		}
 	}

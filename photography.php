@@ -59,7 +59,7 @@ include 'header.php' ?>
                 <div class="container">
                     <div class="photography-container">
                         <div class="inner-photography d-flex flex-wrap row">
-                            <div class="col-xl-3 col-lg-2">
+                            <div class="col-lg-2">
                                 <ul class="nav flex-lg-column flex-row justify-content-between justify-content-lg-start nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="film-stills-tab" data-toggle="pill" href="#film-stills" role="tab" aria-controls="film-stills" aria-selected="true">Film Stills</a>
@@ -84,16 +84,17 @@ include 'header.php' ?>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-xl-9 col-lg-10">
+                            <div class="col-lg-10">
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="film-stills" role="tabpanel" aria-labelledby="film-stills">
-                                        <div class="photography-content">
-                                            <div class="photo-sizer"></div>
+                                        <div class="photography-content d-flex flex-wrap">
                                             <?php 
                                                 foreach ($film_stills as $value) {
                                             ?>
                                                 <div class="photography-item">
-                                                    <img src="libraries/images/<?php echo $value; ?>" alt="" class="img-fluid">
+                                                    <a href="libraries/images/<?php echo $value; ?>" data-title="Hello There">
+                                                        <img src="libraries/images/<?php echo $value; ?>" alt="" class="img-fluid">
+                                                    </a>
                                                 </div>
                                             <?php
                                                 }

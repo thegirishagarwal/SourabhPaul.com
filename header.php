@@ -20,6 +20,7 @@
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 			<link rel="stylesheet" href="libraries/plugins/owlCarousel/assets/owl.carousel.min.css">
+			<link rel="stylesheet" href="libraries/plugins/magnific/magnific-popup.css">
 
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" />
 		<!-- Custom -->
@@ -62,7 +63,7 @@
 										</div>
 										<nav id="navigation" class="d-flex flex-wrap justify-content-between w-100">
 											<div class="col-lg-4">
-												<ul id="menu-left" class="d-flex flex-wrap list-unstyled justify-content-between">
+												<ul id="menu-left" class="d-flex flex-wrap list-unstyled">
 													<li>
 														<a href="motion.php">
 															Motion
@@ -81,7 +82,7 @@
 												</ul>
 											</div>
 											<div class="col-lg-4">
-												<ul id="menu-right" class="d-flex flex-wrap list-unstyled justify-content-between">
+												<ul id="menu-right" class="d-flex flex-wrap list-unstyled">
 													<li>
 														<a href="#clientsPage" class="scroll" data-href="#clients">
 															Clients
